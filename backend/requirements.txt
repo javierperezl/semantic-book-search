@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+
+httpx
+
+pydantic>=2
+
+openai>=1.0.0
+
+sentence-transformers>=3
+
+numpy
+
+pytest
+pytest-asyncio
+respx

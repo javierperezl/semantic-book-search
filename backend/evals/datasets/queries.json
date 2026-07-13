@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "query": "Books like Atomic Habits but for business"
+    },
+    {
+        "id": 2,
+        "query": "Fantasy books with political intrigue"
+    },
+    {
+        "id": 3,
+        "query": "Books about habit formation"
+    },
+    {
+        "id": 4,
+        "query": "Introduction to machine learning"
+    },
+    {
+        "id": 5,
+        "query": "Psychology books about decision making"
+    }
+]
