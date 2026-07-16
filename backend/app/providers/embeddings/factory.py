@@ -1,5 +1,6 @@
 from app.config import get_settings
 from app.providers.embeddings.base import EmbeddingProvider
+from app.providers.embeddings.openai_provider import OpenAIEmbeddingProvider
 from app.providers.embeddings.sentence_transformer_provider import (
     SentenceTransformerProvider,
 )
@@ -20,6 +21,9 @@ def get_embedding_provider() -> EmbeddingProvider:
 
         case "sentence-transformers":
             _provider = SentenceTransformerProvider()
+
+        case "openai":
+            _provider = OpenAIEmbeddingProvider()
 
         case _:
             raise ValueError(

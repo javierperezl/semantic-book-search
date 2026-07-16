@@ -1,30 +1,26 @@
 """
-Eval mínima para la métrica de éxito del reto: "resultados más pertinentes
-que una búsqueda por keyword".
+Comparación ciega: pipeline semántico vs. baseline de keyword search puro.
 
-Idea: por cada query de prueba, comparamos
-  A) los top-N resultados de nuestro pipeline (intent + rerank semántico)
+Por cada query, comparamos
+  A) los top-N resultados del pipeline completo (intent + rerank semántico)
   B) un baseline ingenuo: primeros N resultados de /search.json sin rerank
 
-y le pedimos a un LLM (distinto del que generó la respuesta, o el mismo con
-un prompt de juez neutral) que diga cuál lista es más pertinente para la
-query original, sin saber cuál es cuál (ciego).
+y le pedimos a un LLM juez (sin saber cuál lista es cuál) cuál es más
+pertinente para la query original.
 
-Esto es un punto de partida, no una suite completa: correr manualmente con
-un puñado de queries representativas y revisar los veredictos, no asumir
-que un solo run es concluyente.
+Punto de partida rápido para chequear a ojo, no un reemplazo de los
+experimentos formales del Experimento 1 (que usan métricas de IR con
+ground truth fijo, ver evals/experiment_embeddings.py).
 """
 
 import asyncio
-import json
 import random
 
-from openai import OpenAI
-
-from app.config import get_settings
 from app.llm import extract_intent
 from app.openlibrary import search_books
 from app.retriever import build_search_context
+
+from evals.judges.client import JudgeError, call_json_judge, get_judge_client
 
 TEST_QUERIES = [
     "quiero un libro como Sapiens pero sobre economia",
@@ -57,7 +53,6 @@ def format_list(books: list[dict]) -> str:
 
 async def get_semantic_results(query: str) -> list[dict]:
     intent = extract_intent(query)
-    # build_search_context ya devuelve los resultados reranqueados
     _query_profile, results = await build_search_context(intent)
     return results
 
@@ -70,8 +65,7 @@ async def get_keyword_baseline(query: str) -> list[dict]:
 
 
 async def run_eval():
-    settings = get_settings()
-    client = OpenAI(api_key=settings.openai_api_key)
+    client, model = get_judge_client()
 
     for query in TEST_QUERIES:
         semantic = await get_semantic_results(query)
@@ -88,13 +82,12 @@ async def run_eval():
             list_2=format_list(lists[1][1]),
         )
 
-        response = client.chat.completions.create(
-            model=settings.generation_model,
-            response_format={"type": "json_object"},
-            messages=[{"role": "user", "content": prompt}],
-        )
+        try:
+            verdict = call_json_judge(client, model, prompt)
+        except JudgeError as e:
+            print(f"\nQuery: {query}\nEl juez falló: {e}")
+            continue
 
-        verdict = json.loads(response.choices[0].message.content)
         winner_label = label_map.get(verdict.get("winner"), verdict.get("winner"))
 
         print(f"\nQuery: {query}")

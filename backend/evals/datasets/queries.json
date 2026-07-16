@@ -1,22 +1,40 @@
 [
-    {
-        "id": 1,
-        "query": "Books like Atomic Habits but for business"
-    },
-    {
-        "id": 2,
-        "query": "Fantasy books with political intrigue"
-    },
-    {
-        "id": 3,
-        "query": "Books about habit formation"
-    },
-    {
-        "id": 4,
-        "query": "Introduction to machine learning"
-    },
-    {
-        "id": 5,
-        "query": "Psychology books about decision making"
-    }
+    {"id": 1, "category": "similar_books", "query": "Books like Atomic Habits but for business"},
+    {"id": 2, "category": "similar_books", "query": "Quiero un libro como Sapiens pero sobre economia"},
+    {"id": 3, "category": "similar_books", "query": "Something similar to The Hunger Games but darker"},
+    {"id": 4, "category": "similar_books", "query": "Libros de autoayuda sobre habitos como Atomic Habits"},
+    {"id": 5, "category": "similar_books", "query": "Un libro parecido a 1984 pero mas moderno"},
+
+    {"id": 6, "category": "topic_only", "query": "Books about habit formation"},
+    {"id": 7, "category": "topic_only", "query": "Psychology books about decision making"},
+    {"id": 8, "category": "topic_only", "query": "Libros sobre la historia del Imperio Romano"},
+    {"id": 9, "category": "topic_only", "query": "Books about the history of jazz music"},
+    {"id": 10, "category": "topic_only", "query": "Novelas sobre la Segunda Guerra Mundial"},
+
+    {"id": 11, "category": "specific_profile", "query": "Libros de ciencia ficcion para un adolescente que nunca ha leido nada del genero"},
+    {"id": 12, "category": "specific_profile", "query": "Books for a beginner investor with no finance background"},
+    {"id": 13, "category": "specific_profile", "query": "Un libro para un nino de 10 anos interesado en dinosaurios"},
+    {"id": 14, "category": "specific_profile", "query": "Books for someone learning to code with zero programming experience"},
+    {"id": 15, "category": "specific_profile", "query": "Libros de negocios para alguien que va a fundar su primera startup"},
+
+    {"id": 16, "category": "comparison", "query": "Cual es mejor para aprender sobre habitos, Atomic Habits o The Power of Habit"},
+    {"id": 17, "category": "comparison", "query": "How does Sapiens compare to Guns, Germs, and Steel"},
+    {"id": 18, "category": "comparison", "query": "Diferencias entre 1984 y Brave New World para alguien que solo puede leer uno"},
+    {"id": 19, "category": "comparison", "query": "Which is more beginner-friendly, Thinking Fast and Slow or Predictably Irrational"},
+
+    {"id": 20, "category": "ambiguous", "query": "Un buen libro para leer este fin de semana"},
+    {"id": 21, "category": "ambiguous", "query": "Something interesting to read"},
+    {"id": 22, "category": "ambiguous", "query": "Recomiendame un libro bueno"},
+    {"id": 23, "category": "ambiguous", "query": "A book that will change how I see things"},
+
+    {"id": 24, "category": "very_specific", "query": "Historia de la tipografia y el diseno editorial"},
+    {"id": 25, "category": "very_specific", "query": "A technical book on distributed systems consensus algorithms"},
+    {"id": 26, "category": "very_specific", "query": "Libros sobre la restauracion de muebles antiguos de madera"},
+    {"id": 27, "category": "very_specific", "query": "Ethnobotany of the Amazon rainforest"},
+
+    {"id": 28, "category": "broad", "query": "Fantasy books with political intrigue"},
+    {"id": 29, "category": "broad", "query": "Introduction to machine learning"},
+    {"id": 30, "category": "broad", "query": "Cozy mystery novels set in small towns"},
+    {"id": 31, "category": "broad", "query": "Novelas de ciencia ficcion con temas de inteligencia artificial"},
+    {"id": 32, "category": "broad", "query": "How to negotiate a salary raise"}
 ]
