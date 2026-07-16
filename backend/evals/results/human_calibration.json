@@ -1,0 +1,188 @@
+[
+    {
+        "query": "Books like Atomic Habits but for business",
+        "human_score": 8,
+        "judge_score": 9.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Quiero un libro como Sapiens pero sobre economia",
+        "human_score": 7,
+        "judge_score": 6.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Something similar to The Hunger Games but darker",
+        "human_score": 7,
+        "judge_score": 7.0,
+        "diff": 0.0
+    },
+    {
+        "query": "Libros de autoayuda sobre habitos como Atomic Habits",
+        "human_score": 6,
+        "judge_score": 8.0,
+        "diff": -2.0
+    },
+    {
+        "query": "Un libro parecido a 1984 pero mas moderno",
+        "human_score": 7,
+        "judge_score": 6.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Books about habit formation",
+        "human_score": 9,
+        "judge_score": 7.0,
+        "diff": 2.0
+    },
+    {
+        "query": "Psychology books about decision making",
+        "human_score": 7,
+        "judge_score": 9.0,
+        "diff": -2.0
+    },
+    {
+        "query": "Libros sobre la historia del Imperio Romano",
+        "human_score": 8,
+        "judge_score": 9.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Books about the history of jazz music",
+        "human_score": 8,
+        "judge_score": 9.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Novelas sobre la Segunda Guerra Mundial",
+        "human_score": 7,
+        "judge_score": 6.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Libros de ciencia ficcion para un adolescente que nunca ha leido nada del genero",
+        "human_score": 6,
+        "judge_score": 7.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Books for a beginner investor with no finance background",
+        "human_score": 8,
+        "judge_score": 4.0,
+        "diff": 4.0
+    },
+    {
+        "query": "Un libro para un nino de 10 anos interesado en dinosaurios",
+        "human_score": 9,
+        "judge_score": 9.0,
+        "diff": 0.0
+    },
+    {
+        "query": "Books for someone learning to code with zero programming experience",
+        "human_score": 9,
+        "judge_score": 8.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Libros de negocios para alguien que va a fundar su primera startup",
+        "human_score": 8,
+        "judge_score": 6.0,
+        "diff": 2.0
+    },
+    {
+        "query": "Cual es mejor para aprender sobre habitos, Atomic Habits o The Power of Habit",
+        "human_score": 4,
+        "judge_score": 6.0,
+        "diff": -2.0
+    },
+    {
+        "query": "How does Sapiens compare to Guns, Germs, and Steel",
+        "human_score": 2,
+        "judge_score": 7.0,
+        "diff": -5.0
+    },
+    {
+        "query": "Diferencias entre 1984 y Brave New World para alguien que solo puede leer uno",
+        "human_score": 4,
+        "judge_score": 6.0,
+        "diff": -2.0
+    },
+    {
+        "query": "Which is more beginner-friendly, Thinking Fast and Slow or Predictably Irrational",
+        "human_score": 1,
+        "judge_score": 5.0,
+        "diff": -4.0
+    },
+    {
+        "query": "Un buen libro para leer este fin de semana",
+        "human_score": 6,
+        "judge_score": 7.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Something interesting to read",
+        "human_score": 6,
+        "judge_score": 6.0,
+        "diff": 0.0
+    },
+    {
+        "query": "Recomiendame un libro bueno",
+        "human_score": 5,
+        "judge_score": 8.0,
+        "diff": -3.0
+    },
+    {
+        "query": "A book that will change how I see things",
+        "human_score": 7,
+        "judge_score": 8.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Historia de la tipografia y el diseno editorial",
+        "human_score": 6,
+        "judge_score": 9.0,
+        "diff": -3.0
+    },
+    {
+        "query": "A technical book on distributed systems consensus algorithms",
+        "human_score": 8,
+        "judge_score": 7.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Ethnobotany of the Amazon rainforest",
+        "human_score": 8,
+        "judge_score": 9.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Fantasy books with political intrigue",
+        "human_score": 7,
+        "judge_score": 8.0,
+        "diff": -1.0
+    },
+    {
+        "query": "Introduction to machine learning",
+        "human_score": 9,
+        "judge_score": 3.0,
+        "diff": 6.0
+    },
+    {
+        "query": "Cozy mystery novels set in small towns",
+        "human_score": 8,
+        "judge_score": 7.0,
+        "diff": 1.0
+    },
+    {
+        "query": "Novelas de ciencia ficcion con temas de inteligencia artificial",
+        "human_score": 7,
+        "judge_score": 9.0,
+        "diff": -2.0
+    },
+    {
+        "query": "How to negotiate a salary raise",
+        "human_score": 9,
+        "judge_score": 8.0,
+        "diff": 1.0
+    }
+]

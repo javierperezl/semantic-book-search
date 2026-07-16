@@ -1,0 +1,12 @@
+{
+    "num_queries": 32,
+    "avg_latency_sec": 15.614,
+    "avg_grounding_score": 1.0,
+    "ungrounded_queries": [],
+    "unjudged_queries": [],
+    "avg_judge_grounding": 8.875,
+    "avg_judge_relevance": 7.438,
+    "avg_judge_clarity": 9.031,
+    "avg_judge_coverage": 6.781,
+    "avg_judge_overall": 7.219
+}
