@@ -46,6 +46,9 @@ export function SearchInput({
       />
 
       <Button
+        // Base UI renderiza type="button" por defecto; sin esto el click
+        // no dispara el onSubmit del form (solo funcionaba con Enter)
+        type="submit"
         className="h-12 rounded-xl px-6"
         disabled={loading}
       >

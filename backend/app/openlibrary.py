@@ -5,6 +5,7 @@ from typing import Optional
 import httpx
 
 from app.config import get_settings
+from app.trace import PipelineTrace, TraceQueryResult
 
 logger = logging.getLogger(__name__)
 
@@ -96,7 +97,7 @@ async def fetch_work_details(
 
 
 async def multi_search(
-    queries: list[str], limit_per_query: int = 5
+    queries: list[str], limit_per_query: int = 5, trace: PipelineTrace | None = None
 ) -> list[dict]:
     """
     Ejecuta las búsquedas EN PARALELO (antes eran secuenciales) y deduplica
@@ -115,7 +116,14 @@ async def multi_search(
     for query, books_or_error in zip(queries, results_per_query):
         if isinstance(books_or_error, Exception):
             logger.warning("Query '%s' descartada: %s", query, books_or_error)
+            if trace is not None:
+                trace.queries.append(TraceQueryResult(query=query, failed=True))
             continue
+
+        if trace is not None:
+            trace.queries.append(
+                TraceQueryResult(query=query, returned=len(books_or_error))
+            )
 
         for book in books_or_error:
             key = book.get("key")
