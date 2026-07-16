@@ -3,6 +3,8 @@ uvicorn[standard]
 
 httpx
 
+python-dotenv
+
 pydantic>=2
 
 openai>=1.0.0

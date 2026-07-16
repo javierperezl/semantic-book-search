@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { isAxiosError } from "axios";
 import { SearchResponse } from "@/types/api";
 import { searchBooks } from "@/lib/api";
 
@@ -16,8 +17,18 @@ export function useSearch() {
     try {
       const result = await searchBooks(query);
       setData(result);
-    } catch {
-      setError("Search failed.");
+    } catch (err) {
+      console.error("Search failed:", err);
+
+      if (isAxiosError(err)) {
+        if (err.response) {
+          setError(err.response.data?.detail ?? `Search failed (${err.response.status}).`);
+        } else {
+          setError("Could not reach the search API. Is the backend running?");
+        }
+      } else {
+        setError("Search failed.");
+      }
     } finally {
       setLoading(false);
     }
